@@ -1,0 +1,35 @@
+# 账号配置示例
+# 复制此文件为 accounts.yml 并填入真实的API密钥
+
+accounts:
+  - id: "account_1"
+    name: "短线-简洁版"
+    strategy: "short_term"        # short_term 或 long_term
+    prompt_type: "minimal"        # minimal 或 detailed
+    api_key: "YOUR_API_KEY_HERE"
+    api_secret: "YOUR_API_SECRET_HERE"
+    enabled: true
+    
+  - id: "account_2"
+    name: "短线-详细版"
+    strategy: "short_term"
+    prompt_type: "detailed"
+    api_key: "YOUR_API_KEY_HERE"
+    api_secret: "YOUR_API_SECRET_HERE"
+    enabled: true
+    
+  - id: "account_3"
+    name: "中长线-简洁版"
+    strategy: "long_term"
+    prompt_type: "minimal"
+    api_key: "YOUR_API_KEY_HERE"
+    api_secret: "YOUR_API_SECRET_HERE"
+    enabled: true
+    
+  - id: "account_4"
+    name: "中长线-详细版"
+    strategy: "long_term"
+    prompt_type: "detailed"
+    api_key: "YOUR_API_KEY_HERE"
+    api_secret: "YOUR_API_SECRET_HERE"
+    enabled: true

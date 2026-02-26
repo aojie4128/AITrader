@@ -1,0 +1,12 @@
+# 代理配置
+proxy:
+  is_use: true
+  host: 127.0.0.1
+  port: 12334
+
+# 币安API配置（全局默认）
+binance:
+  futures_url: https://fapi.binance.com
+
+# 账号配置文件路径
+accounts_config: "accounts.yml"

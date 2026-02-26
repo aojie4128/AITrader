@@ -1,0 +1,78 @@
+# 服务器配置
+server:
+  port: 8080
+  mode: production
+
+# 账号配置（4个账号：2种策略 × 2种提示词）
+accounts:
+  - id: "account_1"
+    name: "短线-激进"
+    strategy: "short_term"
+    prompt_type: "aggressive"
+    api_key: Zv6DtEQfX17Q0KZMbxJShTXqM0QO8q3t4fsauD9qFyTtZh5erGnjVqpDLaEBDwFe
+    secret_key: Tai28oeEkmazS03iGPUhJfDBpBsWO1Z5RSdhlZ5HeR0U8CIqDoCLMA0vmKaatku0
+    max_risk: 0.02
+    enabled: true
+    
+  - id: "account_2"
+    name: "短线-保守"
+    strategy: "short_term"
+    prompt_type: "conservative"
+    api_key: Zv6DtEQfX17Q0KZMbxJShTXqM0QO8q3t4fsauD9qFyTtZh5erGnjVqpDLaEBDwFe
+    secret_key: Tai28oeEkmazS03iGPUhJfDBpBsWO1Z5RSdhlZ5HeR0U8CIqDoCLMA0vmKaatku0
+    max_risk: 0.015
+    enabled: true
+    
+  - id: "account_3"
+    name: "中长线-激进"
+    strategy: "long_term"
+    prompt_type: "aggressive"
+    api_key: Zv6DtEQfX17Q0KZMbxJShTXqM0QO8q3t4fsauD9qFyTtZh5erGnjVqpDLaEBDwFe
+    secret_key: Tai28oeEkmazS03iGPUhJfDBpBsWO1Z5RSdhlZ5HeR0U8CIqDoCLMA0vmKaatku0
+    max_risk: 0.03
+    enabled: true
+    
+  - id: "account_4"
+    name: "中长线-保守"
+    strategy: "long_term"
+    prompt_type: "conservative"
+    api_key: Zv6DtEQfX17Q0KZMbxJShTXqM0QO8q3t4fsauD9qFyTtZh5erGnjVqpDLaEBDwFe
+    secret_key: Tai28oeEkmazS03iGPUhJfDBpBsWO1Z5RSdhlZ5HeR0U8CIqDoCLMA0vmKaatku0
+    max_risk: 0.025
+    enabled: true
+
+# 策略配置
+strategies:
+  short_term:
+    timeframes: ["1m", "5m", "15m"]
+    indicators: ["ema_9", "ema_21", "rsi_14", "macd", "bb", "volume"]
+    interval: "5m"
+    
+  long_term:
+    timeframes: ["1h", "4h", "1d"]
+    indicators: ["ema_50", "ema_200", "rsi_14", "macd", "atr", "volume_profile"]
+    interval: "1h"
+
+# AI配置
+ai:
+  provider: "openai"  # openai, anthropic, deepseek
+  model: "gpt-4"
+  api_key: "sk-test-key-placeholder"  # 请替换为真实的API Key，或使用环境变量 ${AI_API_KEY}
+  timeout: "30s"
+
+# 数据库配置
+database:
+  type: "sqlite"
+  path: "./data/trading.db"
+
+# 通知配置
+notification:
+  telegram:
+    bot_token: "placeholder-bot-token"  # 请替换为真实的Token，或使用环境变量 ${TELEGRAM_BOT_TOKEN}
+    chat_id: "placeholder-chat-id"      # 请替换为真实的Chat ID，或使用环境变量 ${TELEGRAM_CHAT_ID}
+    enabled: true
+
+# 交易配置
+trading:
+  symbols: ["BTCUSDT", "ETHUSDT"]
+  test_mode: true  # 模拟交易模式

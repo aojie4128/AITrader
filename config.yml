@@ -1,0 +1,11 @@
+# 代理配置
+proxy:
+  is_use: true
+  host: 127.0.0.1
+  port: 12334
+
+# 币安API配置（全局默认）
+binance:
+  api_key: Zv6DtEQfX17Q0KZMbxJShTXqM0QO8q3t4fsauD9qFyTtZh5erGnjVqpDLaEBDwFe
+  api_secret: Tai28oeEkmazS03iGPUhJfDBpBsWO1Z5RSdhlZ5HeR0U8CIqDoCLMA0vmKaatku0
+  futures_url: https://fapi.binance.com

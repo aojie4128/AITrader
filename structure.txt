@@ -1,0 +1,30 @@
+crypto-ai-trader/
+├── config/              # 配置管理
+│   └── config.go
+├── binance/             # 币安API封装
+├── indicators/          # 技术指标计算
+├── aggregator/          # 数据聚合器
+├── ai/                  # AI分析
+├── executor/            # 交易执行器
+├── scheduler/           # 调度器
+├── trading/             # 交易相关（账户、风险等）
+├── database/            # 数据库
+├── notification/        # 通知服务
+├── server/              # HTTP服务器
+├── utils/               # 公共工具
+├── test/                # 测试程序
+│   ├── config/          # config模块测试
+│   │   └── test_config.go
+│   ├── binance/         # binance模块测试
+│   ├── indicators/      # indicators模块测试
+│   └── ...              # 其他模块测试
+├── web/                 # React前端
+├── prompts/             # AI提示词
+├── config.yml           # 配置文件
+├── main.go              # 主程序入口
+└── README.md            # 项目说明
+
+测试规则：
+- 每个功能模块在 test/ 下都有对应的文件夹
+- 测试文件命名格式：test_xx.go
+- 例如：test/config/test_config.go 测试 config/ 模块
