@@ -32,6 +32,7 @@ Thumbs.db
 
 # Application
 data/
+logs/
 *.db
 *.log
 
