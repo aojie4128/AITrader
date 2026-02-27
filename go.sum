@@ -1,3 +1,5 @@
+github.com/markcheno/go-talib v0.0.0-20250114000313-ec55a20c902f h1:iKq//xEUUaeRoXNcAshpK4W8eSm7HtgI0aNznWtX7lk=
+github.com/markcheno/go-talib v0.0.0-20250114000313-ec55a20c902f/go.mod h1:3YUtoVrKWu2ql+iAeRyepSz3fy6a+19hJzGS88+u4u0=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
 go.uber.org/multierr v1.11.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=
 go.uber.org/zap v1.27.1 h1:08RqriUEv8+ArZRYSTXy1LeBScaMpVSTBhCeaZYfMYc=

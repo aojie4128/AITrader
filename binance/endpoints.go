@@ -17,4 +17,9 @@ const (
 	
 	// 市场数据端点
 	EndpointKlines = "/fapi/v1/klines" // 获取K线数据
+	
+	// 资金流数据端点
+	EndpointOpenInterest = "/fapi/v1/openInterest" // 获取持仓量
+	EndpointFundingRate  = "/fapi/v1/fundingRate"  // 获取资金费率历史
+	EndpointPremiumIndex = "/fapi/v1/premiumIndex" // 获取当前资金费率和标记价格
 )
