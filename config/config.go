@@ -21,10 +21,11 @@ import (
 
 // Config 全局配置结构
 type Config struct {
-	Proxy          ProxyConfig   `yaml:"proxy"`
-	Binance        BinanceConfig `yaml:"binance"`
-	AccountsConfig string        `yaml:"accounts_config"`
-	Accounts       []Account     `yaml:"-"` // 从单独文件加载
+	Proxy          ProxyConfig       `yaml:"proxy"`
+	Binance        BinanceConfig     `yaml:"binance"`
+	SymbolPool     SymbolPoolConfig  `yaml:"symbol_pool"`
+	AccountsConfig string            `yaml:"accounts_config"`
+	Accounts       []Account         `yaml:"-"` // 从单独文件加载
 }
 
 // ProxyConfig 代理配置
@@ -37,6 +38,20 @@ type ProxyConfig struct {
 // BinanceConfig 币安API配置
 type BinanceConfig struct {
 	FuturesURL string `yaml:"futures_url"`
+}
+
+// SymbolPoolConfig 交易对池配置
+type SymbolPoolConfig struct {
+	DefaultSymbols  []string              `yaml:"default_symbols"`  // 默认交易对
+	ExcludeSymbols  []string              `yaml:"exclude_symbols"`  // 排除的交易对
+	ExternalSymbols ExternalSymbolsConfig `yaml:"external_symbols"` // 外部交易对配置
+}
+
+// ExternalSymbolsConfig 外部交易对配置
+type ExternalSymbolsConfig struct {
+	IsUse    bool    `yaml:"is_use"`     // 是否使用外部API
+	URL      string  `yaml:"url"`        // 外部API地址
+	MinScore float64 `yaml:"min_score"`  // 最低评分要求（默认75）
 }
 
 var globalConfig *Config

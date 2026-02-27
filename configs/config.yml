@@ -10,3 +10,15 @@ binance:
 
 # 账号配置文件路径
 accounts_config: "accounts.yml"
+
+# 交易对池配置
+symbol_pool:
+  default_symbols:
+    - BTCUSDT
+    - ETHUSDT
+  exclude_symbols:
+    - SOLUSDT
+  external_symbols:
+    is_use: true
+    url: https://nofxos.ai/api/ai500/stats?auth=cm_568c67eae410d912c54c
+    min_score: 75  # 最低评分要求，只获取评分大于此值的币种
